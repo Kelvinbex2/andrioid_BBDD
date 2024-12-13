@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TxtNom"
+        android:layout_width="84dp"
+        android:layout_height="46dp"
+        android:gravity="bottom|left"
+        android:hint="Nombre"
+        android:text="Nombre"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.279" />
+
+    <TextView
+        android:id="@+id/TxtApellido"
+        android:layout_width="87dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:gravity="bottom|left"
+        android:hint="Apellidos"
+        android:text="Apellidos"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/TxtNom"
+        app:layout_constraintTop_toBottomOf="@+id/TxtNom" />
+
+    <EditText
+        android:id="@+id/idNom"
+        android:layout_width="226dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/TxtNom"
+        app:layout_constraintTop_toTopOf="@+id/TxtNom" />
+
+    <EditText
+        android:id="@+id/idApel"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="Apellidos"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/TxtApellido"
+        app:layout_constraintTop_toBottomOf="@+id/idNom" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Agregar"
+        app:layout_constraintStart_toStartOf="@+id/TxtApellido"
+        app:layout_constraintTop_toBottomOf="@+id/TxtApellido" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="72dp"
+        android:text="Mostrar"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardar"
+        app:layout_constraintTop_toBottomOf="@+id/idApel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
